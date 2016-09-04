@@ -1,0 +1,108 @@
+/* Base Application Styles */
+
+html,body{
+	background-color: #222;
+	width: 100%;
+	height: 100%;
+}
+
+.test-rotate{
+    transform: rrotate(30);
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+}
+
+/*stage--start*/
+.stage{
+	position: relative;
+	width: 100%;;
+	height: 600px;
+}
+/*stage--end*/
+
+/*img--start*/
+.img-sec{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	background-color: #DDD;
+	
+	perspective: 1800px;
+	
+	@at-root{
+	.img-figure{
+		position: absolute;
+		
+		width :320px;
+		height: 360px;
+		margin: 0;
+		padding: 40px;
+		
+		background-color: #fff;
+		border: 1px solid #CCC;
+		box-sizing: border-box;
+		cursor: pointer;
+		transform-style: preserve-3d;
+		&.is-inverse{
+		    transform: rotateY(180deg);
+		}
+     }
+   
+    .img-back {
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+        width: 100%;
+        height: 100%;
+        line-height: 250px;
+        padding: 30px;
+        border: 2px solid black;
+        
+        box-sizing: border-box;
+        
+        text-align: center;
+        font-family: "微软雅黑";
+        font-weight: bold;
+        color: #666;
+        
+        transform: rotateY(180deg) translateZ(1px);
+        
+        backface-visibility: hidden;
+        background-color: #FFF;
+        
+    }
+	figcaption{
+		text-align: center;
+		.img-title{
+			margin: 20px 0 0 0;
+			
+			color: #a7a0a2;
+			font-size: 16px;
+		}
+	}
+	.test{
+	    &:hover{
+	        color:red;
+	    }
+	}             
+	}
+}
+/*img-end*/
+
+/*controller--start*/
+.controller{
+	position: absolute;
+	left: 0px;;
+	bottom: 30px;
+	z-index: 101;
+	
+	width: 100%;
+	text-align: center;
+}
+/*controller--end*/
